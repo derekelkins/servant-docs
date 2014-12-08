@@ -325,6 +325,7 @@ instance (KnownSymbol sym, ToParam (QueryParams sym a), HasDocs sublayout) => Ha
 instance (KnownSymbol sym, ToParam (QueryParam sym a), HasDocs sublayout) => HasDocs (QueryParam sym a :> sublayout)
 instance ToSample a => HasDocs (Put a)
 instance ToSample a => HasDocs (Post a)
+instance (KnownSymbol sym, HasDocs sublayout) => HasDocs (Header sym a :> sublayout)
 instance ToSample a => HasDocs (Get a)
 instance HasDocs Delete
 instance (KnownSymbol sym, ToCapture (Capture sym a), HasDocs sublayout) => HasDocs (Capture sym a :> sublayout)
