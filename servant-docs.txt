@@ -2,6 +2,8 @@
 -- See Hoogle, http://www.haskell.org/hoogle/
 
 
+-- | generate API docs for your servant webservice
+--   
 @package servant-docs
 @version 0.2
 
